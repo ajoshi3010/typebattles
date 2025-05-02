@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { ws } from "@/app/lib/webSocket";
 import { useParams, useRouter } from "next/navigation";
-import { SupportedMessage, ActiveItemType, AdminType,UserType, ResultType } from "@/app/lib/handleType";
+import { SupportedMessage, ActiveItemType, AdminType, UserType, ResultType } from "@/app/lib/handleType";
 import { RoomAppbar, Loading, Login, Modal, UsersButton, CreateBattle, Battle, StartBattle, ResultPage, CopyRoomId, CountDown, QuitBattle } from "@/app/components";
 
 
@@ -42,7 +42,7 @@ const Page = () => {
         ws.removeEventListener("message", handleWebSocketMessage);
       };
     }
-  }, [user?.id, roomId,admin]);
+  }, [user?.id, roomId, admin]);
   useEffect(() => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       e.preventDefault();
@@ -76,7 +76,7 @@ const Page = () => {
       if (!msg.payload.exist) {
         router.push("/room");
       }
-      if(admin?.id=='')setAdmin(msg.payload.admin);
+      if (admin?.id == '') setAdmin(msg.payload.admin);
       const battleInfo = msg.payload.battleInfo;
       if (battleInfo) {
         const { words, duration, gameConfig } = battleInfo;

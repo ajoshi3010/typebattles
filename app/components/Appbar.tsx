@@ -9,9 +9,9 @@ function Appbar() {
         return (
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-6">
-                    <div className="flex items-center">
+                    <div className="flex items-center" onClick={()=>{window.location.href='/'}}>
                         <img src="/favicon.ico" alt="Typebattles Icon" className="w-10 h-10 rounded-md mr-2 cursor-pointer" />
-                        <span className="text-gray-200 text-4xl font-semibold pb-3 cursor-pointer">Typebattles</span>
+                        <span className="text-gray-200 text-4xl font-semibold pb-3 cursor-pointer" >Typebattles</span>
                     </div>
                 </div>
                 <div className="flex items-center space-x-6">
@@ -26,9 +26,9 @@ function Appbar() {
     return (
         <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-6">
-                <div className="flex items-center">
+                <div className="flex items-center" onClick={()=>{window.location.href='/'}}>
                     <img src="/favicon.ico" alt="Typebattles Icon" className="w-10 h-10 rounded-md mr-2 cursor-pointer" />
-                    <span className="text-gray-200 text-4xl font-semibold pb-3 cursor-pointer">Typebattles</span>
+                    <span className="text-gray-200 text-4xl font-semibold pb-3 cursor-pointer" >Typebattles</span>
                 </div>
                 <i className="fas fa-keyboard text-gray-500 text-lg hover:text-white transition-colors duration-200 cursor-pointer"></i>
                 <i className="fas fa-crown text-gray-500 text-lg hover:text-white transition-colors duration-200 cursor-pointer"></i>

@@ -56,6 +56,7 @@ const RoomAppbar = ({ userId, isAdmin, activeItems, setActiveItems, roomId }: { 
     }
 
     return (
+        <>
         <div className="flex justify-center pb-3">
             <div className="inline-flex flex-wrap text-sm gap-6 bg-tb-black py-2 px-4 font-sans rounded-lg w-full md:w-auto">
                 {/* Section 1 */}
@@ -148,6 +149,7 @@ const RoomAppbar = ({ userId, isAdmin, activeItems, setActiveItems, roomId }: { 
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

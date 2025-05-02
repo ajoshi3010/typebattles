@@ -20,7 +20,7 @@ const Login = (props: Props) => {
         const res = await signIn("credentials", {
             email: email.current,
             name: name.current,
-            image:'/images/UserImage.png',
+            image: '/images/UserImage.png',
             password: pass.current,
             redirect: true,
             callbackUrl: props.callbackUrl ?? "http:localhost:3000"
