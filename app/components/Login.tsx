@@ -23,17 +23,17 @@ const Login = (props: Props) => {
             image: '/images/UserImage.png',
             password: pass.current,
             redirect: true,
-            callbackUrl: props.callbackUrl ?? "http:localhost:3000"
+            callbackUrl: props.callbackUrl ?? "/"
         })
         if (!res?.error) {
-            <Link href={(props.callbackUrl ?? "http://localhost:3000")}></Link>
+            <Link href={(props.callbackUrl ?? "/")}></Link>
         }
     };
 
     const onGoogleLogin = async () => {
         await signIn("google", {
             redirect: true,
-            callbackUrl: props.callbackUrl ?? '/'
+            callbackUrl: props.callbackUrl ?? "/"
         });
     };
 
